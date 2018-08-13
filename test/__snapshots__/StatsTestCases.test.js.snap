@@ -568,6 +568,30 @@ chunk {main} bundle.js (main) 73 bytes >{0}< >{1}< [entry] [rendered]
      factory:Xms building:Xms = Xms"
 `;
 
+exports[`StatsTestCases should print correct stats for chunks-development 2`] = `
+"Hash: 90689c331404057e5301
+Time: Xms
+Built at: Thu Jan 01 1970 00:00:00 GMT
+    Asset      Size  Chunks             Chunk Names
+bundle.js  5.46 KiB       0  [emitted]  main
+Entrypoint main = bundle.js
+chunk    {0} bundle.js (main) 0 bytes [entry] [rendered]
+    > ./index main
+    2 modules"
+`;
+
+exports[`StatsTestCases should print correct stats for chunks-development 3`] = `
+"Hash: 6e4cc8e96216de7589de
+Time: Xms
+Built at: Thu Jan 01 1970 00:00:00 GMT
+    Asset      Size  Chunks             Chunk Names
+bundle.js  5.48 KiB    main  [emitted]  main
+Entrypoint main = bundle.js
+chunk {main} bundle.js (main) 0 bytes [entry] [rendered]
+    > ./index main
+    2 modules"
+`;
+
 exports[`StatsTestCases should print correct stats for circular-correctness 1`] = `
 "Entrypoint main = bundle.js
 chunk    {0} bundle.js (main) 98 bytes >{1}< >{2}< [entry] [rendered]
@@ -1497,6 +1521,18 @@ Entrypoint entry = entry.js
 [0] ./entry.js 47 bytes {entry} [built]
 [1] ./modules/a.js 37 bytes {chunk-containing-__a_js} [built]
 [2] ./modules/b.js 22 bytes {chunk-containing-__b_js} [built]"
+`;
+
+exports[`StatsTestCases should print correct stats for named-chunks-plugin-async 2`] = `
+"Hash: c3f478ac7625e64ce002
+Time: Xms
+Built at: Thu Jan 01 1970 00:00:00 GMT
+   Asset      Size  Chunks             Chunk Names
+entry.js  5.48 KiB   entry  [emitted]  entry
+Entrypoint entry = entry.js
+[0] ./entry.js 47 bytes {entry} [built]
+[1] ./modules/a.js 37 bytes {} [built]
+[2] ./modules/b.js 22 bytes {} {} [built]"
 `;
 
 exports[`StatsTestCases should print correct stats for no-emit-on-errors-plugin-with-child-error 1`] = `
