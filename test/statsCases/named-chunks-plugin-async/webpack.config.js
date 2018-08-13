@@ -15,7 +15,7 @@ module.exports = {
 				return chunk.name;
 			}
 			const chunkModulesToName = chunk =>
-				Array.from(chunk.modulesIterable, mod => {
+				Array.from(chunkGraph.getChunkModulesIterable(chunk), mod => {
 					const rs = new RequestShortener(mod.context);
 					return rs.shorten(mod.request).replace(/[./\\]/g, "_");
 				}).join("-");
