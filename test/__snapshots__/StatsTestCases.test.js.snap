@@ -2228,10 +2228,10 @@ main.js   9.32 KiB       0  [emitted]  main
 Entrypoint main = main.js
 [0] ./components/src/CompAB/CompA.js 89 bytes {0} [built]
     [only some exports used: default]
-    harmony side effect evaluation ./CompA  ./components/src/CompAB/index.js 1:0-43
-    harmony export imported specifier ./CompA  ./components/src/CompAB/index.js 1:0-43
     harmony import specifier ./components [2] ./foo.js 3:20-25 (skipped side-effect-free modules)
     harmony import specifier ./components [3] ./main.js + 1 modules 3:15-20 (skipped side-effect-free modules)
+    harmony side effect evaluation ./CompA  ./components/src/CompAB/index.js 1:0-43
+    harmony export imported specifier ./CompA  ./components/src/CompAB/index.js 1:0-43
 [1] ./components/src/CompAB/utils.js 97 bytes {0} [built]
     harmony side effect evaluation ./utils [0] ./components/src/CompAB/CompA.js 1:0-35
     harmony import specifier ./utils [0] ./components/src/CompAB/CompA.js 5:5-12
