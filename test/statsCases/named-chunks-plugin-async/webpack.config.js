@@ -10,7 +10,7 @@ module.exports = {
 		entry: "./entry"
 	},
 	plugins: [
-		new NamedChunksPlugin(function(chunk) {
+		new NamedChunksPlugin(function(chunk, { chunkGraph }) {
 			if (chunk.name) {
 				return chunk.name;
 			}
@@ -20,7 +20,7 @@ module.exports = {
 					return rs.shorten(mod.request).replace(/[./\\]/g, "_");
 				}).join("-");
 
-			if (chunk.getNumberOfModules() > 0) {
+			if (chunkGraph.getNumberOfChunkModules(chunk) > 0) {
 				return `chunk-containing-${chunkModulesToName(chunk)}`;
 			}
 
